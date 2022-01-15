@@ -9,8 +9,8 @@ import { armyRating } from './civics.js';
 import { alevel } from './achieve.js';
 import { loc } from './locale.js';
 
-export function enableDebug(){
-    if (global.settings.expose){
+export function enableDebug() {
+    if (global.settings.expose) {
         window.evolve = {
             actions: deepClone(actions),
             races: deepClone(races),
@@ -37,10 +37,11 @@ export function enableDebug(){
     }
 }
 
-export function updateDebugData(){
-    if (global.settings.expose){
-        window.evolve.global = deepClone(global);
+export function updateDebugData() {
+    if (global.settings.expose) {
+        // window.evolve.global = deepClone(global);
+        window.evolve.global = global;
         window.evolve.craftCost = deepClone(craftCost()),
-        window.evolve.breakdown = deepClone(breakdown);
+            window.evolve.breakdown = deepClone(breakdown);
     }
 }
