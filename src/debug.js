@@ -13,7 +13,8 @@ export function enableDebug() {
     if (global.settings.expose) {
         window.evolve = {
             actions: deepClone(actions),
-            races: deepClone(races),
+            // races: deepClone(races),
+            races: races,
             traits: deepClone(traits),
             tradeRatio: deepClone(tradeRatio),
             craftCost: deepClone(craftCost()),
